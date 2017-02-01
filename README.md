@@ -19,8 +19,9 @@ $ npm install personality-consumption-preferences
 ```JavaScript
   var PersonalityConsumptionPreferences = require('personality-consumption-preferences');
 
-  // locale refers to the language to use - en, es or ja
-  var consumptionPreferences = new PersonalityConsumptionPreferences({ locale: 'es'});
+  // locale refers to the language to use - en, es or ja.  default is a locale of 'en' and a version of 'v3'
+  // currently only v3 is supported
+  var consumptionPreferences = new PersonalityConsumptionPreferences({ locale: 'es', version: 'v3'});
 
   // retrieve the consumption preference description for a specified consumption preference id (e.g., 'consumption_preferences_clothes_style')
   var clothesStylePreference  = consumptionPreferences.description('consumption_preferences_clothes_style');

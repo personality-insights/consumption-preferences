@@ -21,43 +21,41 @@ const PersonalityConsumptionPreferences  = require('../lib/index');
 
 describe('preferences', () => {
 
-  it('get default (English) preference description: consumption_preferences_clothes_style', () => {
+  it('get default (en locale, v3 version) preference description: consumption_preferences_clothes_style', () => {
     const consumptionPreferences = new PersonalityConsumptionPreferences();
     assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), 'prefer style when buying clothes');
     assert.equal(consumptionPreferences.descriptions().length, 52);
     assert.equal(consumptionPreferences.descriptions()[4], 'prefer style when buying clothes');
   });
 
-  it('get English preference description: consumption_preferences_clothes_style', () => {
+  it('get English preference description (default version): consumption_preferences_clothes_style', () => {
     const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'en'});
     assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), 'prefer style when buying clothes');
   });
 
-  it('get Spanish preference description: consumption_preferences_clothes_style', () => {
+  it('get Spanish preference description (default version): consumption_preferences_clothes_style', () => {
     const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'es'});
     assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), 'prefiera el estilo al comprar ropa');
   });
 
-  it('get Japanese preference description: consumption_preferences_clothes_style', () => {
+  it('get Japanese preference description (default version): consumption_preferences_clothes_style', () => {
     const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'ja'});
     assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), '衣服を買うときはスタイルを優先する');
   });
 
-  it('get English preference description: consumption_preferences_volunteering_time', () => {
-    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'en'});
+  it('get English preference description (v3 version specified): consumption_preferences_volunteering_time', () => {
+    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'en', version : 'v3'});
     assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), 'have spent time volunteering');
   });
 
-  it('get Spanish preference description: consumption_preferences_volunteering_time', () => {
-    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'es'});
+  it('get Spanish preference description (v3 version specified): consumption_preferences_volunteering_time', () => {
+    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'es', version : 'v3'});
     assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), 'haya dedicado parte de su tiempo al voluntariado');
   });
 
-  it('get Japanese preference description: consumption_preferences_volunteering_time', () => {
-    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'ja'});
+  it('get Japanese preference description (v3 version specified): consumption_preferences_volunteering_time', () => {
+    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'ja', version : 'v3'});
     assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), 'ボランティア活動に参加したことがある');
   });
-
-
 
 });
