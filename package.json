@@ -1,0 +1,49 @@
+{
+  "name": "personality-consumption-preferences",
+  "version": "1.0.0",
+  "description": "Obtain descriptions for IBM Watson Personality Insights consumption preferences",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "node_modules/.bin/browserify -t [ babelify --presets [ es2015 ] ] --standalone PersonalityConsumptionPreferences lib/index.js -o dist/index.js",
+    "prepublish": "npm run compile",
+    "test": "npm run lint && npm run codecov",
+    "lint": "eslint .",
+    "autofix": "eslint . --fix",
+    "codecov": "istanbul cover mocha test && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/personality-insights/consumption-preferences.git"
+  },
+  "keywords": [
+    "personality",
+    "insights",
+    "consumption",
+    "preferences",
+    "ibm",
+    "watson"
+  ],
+  "author": "IBM Corp.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/personality-insights/consumption-preferences/issues"
+  },
+  "homepage": "https://github.com/personality-insights/consumption-preferences#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "browserify": "^13.1.1",
+    "marked": "^0.3.5",
+    "remove-markdown": "^0.1.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "chai": "^3.5.0",
+    "codecov": "^1.0.1",
+    "eslint": "^3.11.1",
+    "istanbul": "^0.4.3",
+    "mocha": "^3.2.0"
+  }
+}
