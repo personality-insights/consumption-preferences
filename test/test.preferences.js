@@ -43,6 +43,11 @@ describe('preferences', () => {
     assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), '衣服を買うときはスタイルを優先する');
   });
 
+  it('get Korean preference description (default version): consumption_preferences_clothes_style', () => {
+    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'ko'});
+    assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), '옷을 살 때 스타일을 선호하는');
+  });
+
   it('get English preference description (v3 version specified): consumption_preferences_volunteering_time', () => {
     const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'en', version : 'v3'});
     assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), 'have spent time volunteering');
@@ -56,6 +61,11 @@ describe('preferences', () => {
   it('get Japanese preference description (v3 version specified): consumption_preferences_volunteering_time', () => {
     const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'ja', version : 'v3'});
     assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), 'ボランティア活動に参加したことがある');
+  });
+
+  it('get Korean preference description (v3 version specified): consumption_preferences_volunteering_time', () => {
+    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'ko', version : 'v3'});
+    assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), '자원봉사활동에 참여한 적이 있는');
   });
 
 });
