@@ -1,6 +1,6 @@
 {
   "name": "personality-consumption-preferences",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Obtain descriptions for IBM Watson Personality Insights consumption preferences",
   "main": "lib/index.js",
   "scripts": {
