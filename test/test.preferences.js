@@ -45,7 +45,7 @@ describe('preferences', () => {
 
   it('get Korean preference description (default version): consumption_preferences_clothes_style', () => {
     const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'ko'});
-    assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), '옷을 살 때 스타일을 선호하는');
+    assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), '옷을 살 때 스타일을 선호합니다');
   });
 
   it('get English preference description (v3 version specified): consumption_preferences_volunteering_time', () => {
@@ -65,7 +65,7 @@ describe('preferences', () => {
 
   it('get Korean preference description (v3 version specified): consumption_preferences_volunteering_time', () => {
     const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'ko', version : 'v3'});
-    assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), '자원봉사활동에 참여한 적이 있는');
+    assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), '자원봉사활동에 참여한 적이 있습니다');
   });
 
 });
