@@ -8,6 +8,8 @@ declare class PersonalityConsumptionPreferences {
 
   defaultOptions(): { locale: Locale, version: Version };
 
+  setLocale(locale: Locale): void;
+
   description(consumption_preference_id: string): string;
 
   descriptions(): string[];

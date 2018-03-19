@@ -68,4 +68,12 @@ describe('preferences', () => {
     assert.equal(consumptionPreferences.description('consumption_preferences_volunteering_time'), '자원봉사활동에 참여한 적이 있습니다');
   });
 
+  it('should work when changing locale', () => {
+    const consumptionPreferences = new PersonalityConsumptionPreferences({locale : 'en'});
+    assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), 'prefer style when buying clothes');
+
+    consumptionPreferences.setLocale('es');
+    assert.equal(consumptionPreferences.description('consumption_preferences_clothes_style'), 'prefiera el estilo al comprar ropa');
+  });
+
 });
